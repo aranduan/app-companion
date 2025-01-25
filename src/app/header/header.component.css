@@ -1,0 +1,59 @@
+/* Estilos generales */
+header {
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+  padding: 10px 20px;
+ background-color: #f0f0f0;
+}
+
+ .logo img {
+   max-height: 50px;
+}
+
+.menu-icon {
+ font-size: 2em;
+ cursor: pointer;
+   display: block;
+ }
+
+/* Estilos para el menú */
+.menu-options {
+ position: absolute;
+top: 60px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+ z-index: 100;
+}
+
+
+.menu-options ul {
+ list-style: none;
+   padding: 0;
+}
+
+.menu-options ul li {
+ padding: 5px 0;
+}
+
+/* Pantallas grandes: menú siempre visible */
+@media (min-width: 992px) {
+    .menu-options {
+        position: static;
+      flex-direction: row;
+     background-color: transparent;
+      border: none;
+        padding: 0;
+    }
+
+   .menu-options ul li {
+    margin-right: 20px;
+       padding: 0;
+    }
+
+   .menu-icon {
+     display: none;
+   }
+}

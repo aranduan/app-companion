@@ -6,9 +6,11 @@
 }
 
 .propuesta-dia-title{
-text-align: center;
-margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 40px; /* Aumentamos el espacio */
+  color: #FABC16; /* Color amarillo */
 }
+
 
 .propuesta-dia {
   max-width: 540px; /* Limita el ancho máximo */
@@ -18,4 +20,9 @@ margin-bottom: 20px;
   .propuesta-dia {
     max-width: 540px; /* Limita el ancho máximo en pantallas medianas y grandes */
   }
+}
+
+.btn-primary {
+  background-color: #FABC16;
+  border-color: #FABC16;
 }

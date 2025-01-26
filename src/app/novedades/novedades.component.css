@@ -6,7 +6,8 @@
 
 .novedades-title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px; /* Aumentamos el espacio */
+  color: #FABC16; /* Color amarillo */
 }
 .novedades-container {
     display: flex;
@@ -50,3 +51,8 @@
 .novedad .card-text {
   margin-bottom: 10px;
 }
+
+.btn-primary {
+    background-color: #FABC16;
+    border-color: #FABC16;
+  }

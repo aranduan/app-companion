@@ -1,59 +1,98 @@
 /* Estilos generales */
-header {
+.header {
   display: flex;
- justify-content: space-between;
- align-items: center;
+  flex-direction: column;
+  align-items: center;
   padding: 10px 20px;
- background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
- .logo img {
-   max-height: 50px;
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.app-name {
+  margin: 0;
 }
 
 .menu-icon {
- font-size: 2em;
- cursor: pointer;
-   display: block;
- }
+  font-size: 2em;
+  cursor: pointer;
+}
 
-/* Estilos para el menú */
-.menu-options {
- position: absolute;
-top: 60px;
+/* Estilos para el menu */
+nav {
+  width: 100%;
+}
+
+.menu-options-desktop {
+  display: flex !important;
+  justify-content: flex-end;
+}
+
+.menu-options-mobile {
+  display: flex !important;
+  position: absolute;
+  top: 60px;
   right: 0;
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
- z-index: 100;
+  z-index: 100;
 }
 
 
-.menu-options ul {
- list-style: none;
-   padding: 0;
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
 }
 
-.menu-options ul li {
- padding: 5px 0;
+nav ul li {
+  padding: 5px 0;
+  position: relative;
 }
+
+/* Estilos Submenu */
+.sub-menu {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-menu li {
+  padding: 5px 10px;
+}
+
 
 /* Pantallas grandes: menú siempre visible */
 @media (min-width: 992px) {
-    .menu-options {
-        position: static;
-      flex-direction: row;
-     background-color: transparent;
-      border: none;
-        padding: 0;
-    }
-
-   .menu-options ul li {
-    margin-right: 20px;
-       padding: 0;
-    }
-
-   .menu-icon {
-     display: none;
-   }
+  nav ul li {
+      margin-right: 20px;
+     padding: 0;
+  }
+.menu-icon {
+   display: none;
+}
 }

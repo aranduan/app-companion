@@ -1,70 +1,119 @@
-/* Header */
+/* Estilos generales */
 .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  
+}
+
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
-.header a.logo {
+.logo {
   display: flex;
   align-items: center;
-  text-decoration: none;
-  color: #f9a825; /* Color amarillo para el logo */
-  font-size: 24px;
-  font-family: 'Montserrat', sans-serif; /* Tipografía Montserrat */
-  font-weight: bold;
+  margin-right: 20px;
 }
 
-.header a.logo img {
-  height: 40px; /* Tamaño del logo */
-  margin-right: 10px; /* Espaciado entre el logo y el texto */
+.logo img {
+  max-height: 50px;
 }
 
-/* Menu Hamburguesa */
-.header .navigation ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+.app-name {
+  margin: 0;
 }
 
-.header .navigation ul li a {
-  text-decoration: none;
-  color: #f9a825; /* Color amarillo */
-  font-family: 'Montserrat', sans-serif; /* Tipografía Montserrat */
-  font-size: 16px;
-  font-weight: 500;
-  transition: color 0.3s ease-in-out;
-}
-
-.header .navigation ul li a:hover {
-  color: #ffcc00; /* Un amarillo más claro al pasar el ratón */
-}
-
-/* Estilos adicionales para un menú responsive */
-.header .navigation {
-  display: none; /* Ocultar el menú por defecto */
-}
-
-.header .menu-toggle {
-  display: block;
-  font-size: 24px;
+.menu-icon {
+  font-size: 2em;
   cursor: pointer;
-  color: #f9a825; /* Color amarillo */
 }
 
-/* Mostrar el menú cuando se abre */
-.header.active .navigation {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: #fff;
-  padding: 10px;
+/* Estilos para el menu */
+nav {
+  width: 100%;
+}
+
+.menu-options-desktop {
+  display: flex !important;
+  justify-content: flex-end;
+}
+
+.menu-options-mobile {
+  display: none; /* Ocultamos el menú por defecto */
   position: absolute;
   top: 60px;
-  right: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 100;
+}
+
+.menu-options-mobile.open {
+  display: flex !important; /* Mostramos el menú cuando tiene la clase open */
+  flex-direction: column; /* Alineamos los elementos en columna */
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+    margin: 0;
+    flex-direction: column; /*Alineamos los elementos en columna */
+}
+
+nav ul li {
+  padding: 5px 0;
+  position: relative;
+    display: block; /* Aseguramos que los li sean bloques */
+}
+
+nav ul li a {
+  color: #FABC16; /* Añadimos el color amarillo al texto del link */
+  text-decoration: none; /* Quitamos el subrayado del link */
+}
+
+/* Estilos Submenu */
+.sub-menu {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-menu li {
+  padding: 5px 10px;
+}
+
+.sub-menu li a {
+  color: #FABC16; /* Añadimos el color amarillo al texto del link del submenu */
+  text-decoration: none; /* Quitamos el subrayado del link */
+}
+
+
+
+/* Pantallas grandes: menú siempre visible */
+@media (min-width: 992px) {
+  .menu-options-mobile {
+    display: none; /* Ocultamos el menú móvil */
+  }
+  nav ul li {
+      margin-right: 20px;
+     padding: 0;
+  }
+  .menu-icon {
+    display: none;
+ }
 }

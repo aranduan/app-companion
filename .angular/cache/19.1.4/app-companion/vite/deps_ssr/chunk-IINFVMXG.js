@@ -1,3 +1,4 @@
+import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   ApplicationRef,
   Attribute,
@@ -27,13 +28,9 @@ import {
   Renderer2,
   RendererStyleFlags2,
   RuntimeError,
-  Subject,
   TemplateRef,
   Version,
   ViewContainerRef,
-  __async,
-  __spreadProps,
-  __spreadValues,
   booleanAttribute,
   createNgModule,
   findLocaleData,
@@ -61,9 +58,19 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-76OAE7CP.js";
+} from "./chunk-GZUVJ63M.js";
+import {
+  require_cjs
+} from "./chunk-T4XHMJL2.js";
+import {
+  __async,
+  __spreadProps,
+  __spreadValues,
+  __toESM
+} from "./chunk-YHCV7DAQ.js";
 
 // node_modules/@angular/common/fesm2022/common.mjs
+var import_rxjs = __toESM(require_cjs(), 1);
 var _DOM = null;
 function getDOM() {
   return _DOM;
@@ -410,7 +417,7 @@ var HashLocationStrategy = class _HashLocationStrategy extends LocationStrategy 
 })();
 var Location = class _Location {
   /** @internal */
-  _subject = new Subject();
+  _subject = new import_rxjs.Subject();
   /** @internal */
   _basePath;
   /** @internal */
@@ -3720,104 +3727,10 @@ var ViewportScroller = class _ViewportScroller {
     ɵɵdefineInjectable({
       token: _ViewportScroller,
       providedIn: "root",
-      factory: () => false ? new NullViewportScroller() : new BrowserViewportScroller(inject(DOCUMENT), window)
+      factory: () => true ? new NullViewportScroller() : new BrowserViewportScroller(inject(DOCUMENT), window)
     })
   );
 };
-var BrowserViewportScroller = class {
-  document;
-  window;
-  offset = () => [0, 0];
-  constructor(document, window2) {
-    this.document = document;
-    this.window = window2;
-  }
-  /**
-   * Configures the top offset used when scrolling to an anchor.
-   * @param offset A position in screen coordinates (a tuple with x and y values)
-   * or a function that returns the top offset position.
-   *
-   */
-  setOffset(offset) {
-    if (Array.isArray(offset)) {
-      this.offset = () => offset;
-    } else {
-      this.offset = offset;
-    }
-  }
-  /**
-   * Retrieves the current scroll position.
-   * @returns The position in screen coordinates.
-   */
-  getScrollPosition() {
-    return [this.window.scrollX, this.window.scrollY];
-  }
-  /**
-   * Sets the scroll position.
-   * @param position The new position in screen coordinates.
-   */
-  scrollToPosition(position) {
-    this.window.scrollTo(position[0], position[1]);
-  }
-  /**
-   * Scrolls to an element and attempts to focus the element.
-   *
-   * Note that the function name here is misleading in that the target string may be an ID for a
-   * non-anchor element.
-   *
-   * @param target The ID of an element or name of the anchor.
-   *
-   * @see https://html.spec.whatwg.org/#the-indicated-part-of-the-document
-   * @see https://html.spec.whatwg.org/#scroll-to-fragid
-   */
-  scrollToAnchor(target) {
-    const elSelected = findAnchorFromDocument(this.document, target);
-    if (elSelected) {
-      this.scrollToElement(elSelected);
-      elSelected.focus();
-    }
-  }
-  /**
-   * Disables automatic scroll restoration provided by the browser.
-   */
-  setHistoryScrollRestoration(scrollRestoration) {
-    this.window.history.scrollRestoration = scrollRestoration;
-  }
-  /**
-   * Scrolls to an element using the native offset and the specified offset set on this scroller.
-   *
-   * The offset can be used when we know that there is a floating header and scrolling naively to an
-   * element (ex: `scrollIntoView`) leaves the element hidden behind the floating header.
-   */
-  scrollToElement(el) {
-    const rect = el.getBoundingClientRect();
-    const left = rect.left + this.window.pageXOffset;
-    const top = rect.top + this.window.pageYOffset;
-    const offset = this.offset();
-    this.window.scrollTo(left - offset[0], top - offset[1]);
-  }
-};
-function findAnchorFromDocument(document, target) {
-  const documentResult = document.getElementById(target) || document.getElementsByName(target)[0];
-  if (documentResult) {
-    return documentResult;
-  }
-  if (typeof document.createTreeWalker === "function" && document.body && typeof document.body.attachShadow === "function") {
-    const treeWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
-    let currentNode = treeWalker.currentNode;
-    while (currentNode) {
-      const shadowRoot = currentNode.shadowRoot;
-      if (shadowRoot) {
-        const result = shadowRoot.getElementById(target) || shadowRoot.querySelector(`[name="${target}"]`);
-        if (result) {
-          return result;
-        }
-      }
-      currentNode = treeWalker.nextNode();
-    }
-  }
-  return null;
-}
 var NullViewportScroller = class {
   /**
    * Empty implementation
@@ -5159,4 +5072,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-L2PMZNNI.js.map
+//# sourceMappingURL=chunk-IINFVMXG.js.map

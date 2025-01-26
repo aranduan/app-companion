@@ -5,6 +5,7 @@
   align-items: center;
   padding: 10px 20px;
   background-color: #ffffff;
+  
 }
 
 .header-content {
@@ -73,6 +74,11 @@ nav ul li {
     display: block; /* Aseguramos que los li sean bloques */
 }
 
+nav ul li a {
+  color: #FABC16; /* Añadimos el color amarillo al texto del link */
+  text-decoration: none; /* Quitamos el subrayado del link */
+}
+
 /* Estilos Submenu */
 .sub-menu {
   list-style: none;
@@ -90,6 +96,12 @@ nav ul li {
 .sub-menu li {
   padding: 5px 10px;
 }
+
+.sub-menu li a {
+  color: #FABC16; /* Añadimos el color amarillo al texto del link del submenu */
+  text-decoration: none; /* Quitamos el subrayado del link */
+}
+
 
 
 /* Pantallas grandes: menú siempre visible */

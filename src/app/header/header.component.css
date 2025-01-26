@@ -1,0 +1,70 @@
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header a.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #f9a825; /* Color amarillo para el logo */
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif; /* Tipografía Montserrat */
+  font-weight: bold;
+}
+
+.header a.logo img {
+  height: 40px; /* Tamaño del logo */
+  margin-right: 10px; /* Espaciado entre el logo y el texto */
+}
+
+/* Menu Hamburguesa */
+.header .navigation ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.header .navigation ul li a {
+  text-decoration: none;
+  color: #f9a825; /* Color amarillo */
+  font-family: 'Montserrat', sans-serif; /* Tipografía Montserrat */
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.header .navigation ul li a:hover {
+  color: #ffcc00; /* Un amarillo más claro al pasar el ratón */
+}
+
+/* Estilos adicionales para un menú responsive */
+.header .navigation {
+  display: none; /* Ocultar el menú por defecto */
+}
+
+.header .menu-toggle {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+  color: #f9a825; /* Color amarillo */
+}
+
+/* Mostrar el menú cuando se abre */
+.header.active .navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fff;
+  padding: 10px;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}

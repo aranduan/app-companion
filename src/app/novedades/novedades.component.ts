@@ -18,7 +18,7 @@ export class NovedadesComponent {
         {
             titulo: 'Llega la Navidad!',
             descripcion: 'Prepárate para las nuevas recetas navideñas. Sorprenderás a todos tus seres queridos!',
-            imagen: 'https://graziamagazine.com/mx/wp-content/uploads/sites/13/2020/12/friends-courtney-cox-escena-pavo.jpg'
+            imagen: 'https://i.imgur.com/p50NL2l.jpeg'
         },
         {
             titulo: 'Friends the reunion',

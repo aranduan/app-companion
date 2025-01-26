@@ -21,13 +21,13 @@ export class PropuestaDiaComponent {
       title: 'Pizza de Joey',
       subtitle: '¡La favorita de Joey Tribbiani!',
       description: 'Una pizza bien cargada de queso y pepperoni, lista para disfrutar con amigos.',
-      image: 'https://source.unsplash.com/200x150/?pizza'
+      image: 'https://i.imgur.com/YPKKeJK.png'
     },
     {
       title: 'Muffins de Chandler',
       subtitle: 'Tan buenos como sus bromas',
       description: 'Muffins esponjosos para un desayuno lleno de humor.',
-      image: 'https://source.unsplash.com/200x150/?muffins'
+      image: 'https://i.imgur.com/hEjLyse.png'
     }
   ];
 

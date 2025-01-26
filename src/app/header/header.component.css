@@ -63,13 +63,14 @@ nav {
 nav ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  margin: 0;
+    margin: 0;
+    flex-direction: column; /*Alineamos los elementos en columna */
 }
 
 nav ul li {
   padding: 5px 0;
   position: relative;
+    display: block; /* Aseguramos que los li sean bloques */
 }
 
 /* Estilos Submenu */

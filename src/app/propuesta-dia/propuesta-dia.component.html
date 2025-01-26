@@ -1,15 +1,24 @@
 <div class="card propuesta-dia">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="https://i.imgur.com/BlpE4Ay.png" class="img-fluid rounded-start" alt="Festín de salchichas">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Festín de salchichas</h5>
-          <h6 class="card-subtitle mb-2 text-muted">en honor del tío feo desnudo</h6>
-          <p class="card-text">Preparad bastantes salchichas para un batallón y ofreced tres guarniciones distintas para daros un festín.</p>
-          <a href="#" class="btn btn-primary">Ver receta</a>
-        </div>
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img 
+        [src]="selectedPropuesta.image" 
+        class="img-fluid rounded-start" 
+        [alt]="selectedPropuesta.title"
+      >
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ selectedPropuesta.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ selectedPropuesta.subtitle }}</h6>
+        <p class="card-text">{{ selectedPropuesta.description }}</p>
+        <button 
+          class="btn btn-primary mt-3" 
+          (click)="changePropuesta()"
+        >
+          Cambiar propuesta
+        </button>
       </div>
     </div>
   </div>
+</div>

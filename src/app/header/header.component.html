@@ -5,8 +5,8 @@
       </div>
       <div class="menu-icon" (click)="toggleMenu()">☰</div>
   </div>
-  <nav id="menu-options" [ngClass]="{'menu-options-mobile': windowWidth <= 992 && isMenuOpen, 'menu-options-desktop': windowWidth > 992}">
-    <ul>
+   <nav id="menu-options" [ngClass]="{'menu-options-mobile': windowWidth <= 992, 'menu-options-desktop': windowWidth > 992, 'open': isMenuOpen }">
+    <ul  >
       <li ><a routerLink="/welcome">Welcome</a></li>
       <li ><a routerLink="/">Home</a></li>
       <li >

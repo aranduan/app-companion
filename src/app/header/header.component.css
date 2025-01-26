@@ -44,7 +44,7 @@ nav {
 }
 
 .menu-options-mobile {
-  display: flex !important;
+  display: none; /* Ocultamos el menú por defecto */
   position: absolute;
   top: 60px;
   right: 0;
@@ -52,6 +52,11 @@ nav {
   border: 1px solid #ccc;
   padding: 10px;
   z-index: 100;
+}
+
+.menu-options-mobile.open {
+  display: flex !important; /* Mostramos el menú cuando tiene la clase open */
+  flex-direction: column; /* Alineamos los elementos en columna */
 }
 
 
@@ -88,11 +93,14 @@ nav ul li {
 
 /* Pantallas grandes: menú siempre visible */
 @media (min-width: 992px) {
+  .menu-options-mobile {
+    display: none; /* Ocultamos el menú móvil */
+  }
   nav ul li {
       margin-right: 20px;
      padding: 0;
   }
-.menu-icon {
-   display: none;
-}
+  .menu-icon {
+    display: none;
+ }
 }

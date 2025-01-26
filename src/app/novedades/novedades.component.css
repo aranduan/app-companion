@@ -1,3 +1,13 @@
+.novedades-section{
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.novedades-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
 .novedades-container {
     display: flex;
     flex-direction: column;

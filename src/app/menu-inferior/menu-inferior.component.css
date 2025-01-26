@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   padding: 10px 0;
   z-index: 1000; /* Asegura que el footer esté por encima del resto del contenido */
 }
